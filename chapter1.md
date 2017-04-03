@@ -6,11 +6,11 @@ description : Ces exercices visent a vous familiariser avec le fonctionnement de
 --- type:NormalExercise lang:r xp:50 skills:1 key:0f0c9d8f87
 ## 1) Jeu de données
 
-On considère le jeu de données `diamonds`, qui se trouve déjà dans l'environnement. Le package ggplot2 a déjà été chargé.
+On considère le jeu de données `diamonds`, fourni par la librairie `ggplot2`.
 
 *** =sample_code
 ```{r}
-require(ggplot2)
+library(ggplot2)
 data(diamonds)
 head(diamonds)
 
@@ -24,7 +24,9 @@ p <- ggplot(_____, aes(x=____)) +
 - **Complétez** le code ci-contre pour  tracer l'histogramme correspondant au prix des diamants (couleur de remplissage: `blue`).
 
 *** =solution 
+
 ```{r}
+library(ggplot2)
 data(diamonds)
 head(diamonds)
 
