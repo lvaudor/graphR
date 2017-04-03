@@ -3,7 +3,6 @@ title       : graphR 1 - Introduction
 description : Ces exercices visent a vous familiariser avec le fonctionnement de base de ggplot2
 
 
-
 --- type:NormalExercise lang:r xp:50 skills:1 key:0f0c9d8f87
 ## 1) Jeu de données
 
