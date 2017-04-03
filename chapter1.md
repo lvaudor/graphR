@@ -38,7 +38,6 @@ plot(p)
 
 *** =sct
 ```{r}
-test_object("p")
 test_error()
 test_function("geom_point",c("col"))
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
