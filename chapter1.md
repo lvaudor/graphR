@@ -68,7 +68,7 @@ test_mc(correct = 1,
 ```
 
 
---- type:NormalExercise lang:r xp:50 skills:1 
+--- type:NormalExercise lang:r xp:50 skills:1 key:86589879d3
 ## 3) Geom en tous genres
 
 `ggplot2` et `diamonds` ont déjà été chargés.
