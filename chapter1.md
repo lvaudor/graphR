@@ -4,7 +4,7 @@ description : Ces exercices visent a vous familiariser avec le fonctionnement de
 
 
 
---- type:NormalExercise lang:r xp:50 skills:1
+--- type:NormalExercise lang:r xp:50 skills:1 key:0f0c9d8f87
 ## 1) Jeu de données
 
 *** =sample_code
@@ -38,7 +38,7 @@ test_function("geom_point",c("col"))
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
 ```
 
---- type:MultipleChoiceExercise lang: r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:3e7eb2f40e
 ## 2) Choix de geom
 
 On considère le jeu de données `diamonds`, qui se trouve déjà dans l'environnement.
