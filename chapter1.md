@@ -88,7 +88,7 @@ data(diamonds)
 ```
 
 
-*** sample_code
+*** =sample_code
 ```{r}
 # Graphique p1
 p1 <- ggplot(diamonds, aes(x=___, y=___)) +
@@ -106,7 +106,7 @@ p3 <- ______________________________________
 plot(p3)
 ```
 
-*** solution
+*** =solution
 ```{r}
 # Graphique p1
 p1 <- ggplot(diamonds, aes(x=carat, y=price)) +
