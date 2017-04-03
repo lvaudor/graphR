@@ -120,31 +120,35 @@ $(document).ready(function () {
 
 
 <hr />
-<p>title : graphR 1 - Introduction description : Ces exercices visent a vous familiariser avec le fonctionnement de R, les objets, l’environnement, etc. attachments : slides_link : <a href="http://perso.ens-lyon.fr/lise.vaudor/Supports_formation/startR_1_objets_de_base.html" class="uri">http://perso.ens-lyon.fr/lise.vaudor/Supports_formation/startR_1_objets_de_base.html</a></p>
-<p>— type:NormalExercise lang:r xp:50 skills:1 ## 1) Jeu de données</p>
+<p>title : graphR 1 - Introduction description : Ces exercices visent a vous familiariser avec le fonctionnement de base de ggplot2</p>
+<p>— type:NormalExercise lang:r xp:50 skills:1 key:0f0c9d8f87 ## 1) Jeu de données</p>
+<p>On considère le jeu de données <code>diamonds</code>, fourni par la librairie <code>ggplot2</code>.</p>
 <p>*** =sample_code</p>
-<pre class="{r}"><code>data(diamonds)
+<pre class="{r}"><code>library(ggplot2)
+data(diamonds)
 head(diamonds)
 
 p &lt;- ggplot(_____, aes(x=____)) +
-  geom_point(col=_____)</code></pre>
+  geom_point(col=_____)
+plot(p)</code></pre>
 <p>*** =instructions</p>
 <ul>
 <li><strong>Examinez</strong> le jeu de données <code>diamonds</code></li>
 <li><strong>Complétez</strong> le code ci-contre pour tracer l’histogramme correspondant au prix des diamants (couleur de remplissage: <code>blue</code>).</li>
 </ul>
 <p>*** =solution</p>
-<pre class="{r}"><code>data(diamonds)
+<pre class="{r}"><code>library(ggplot2)
+data(diamonds)
 head(diamonds)
 
 p &lt;- ggplot(diamonds, aes(x=price)) +
-  geom_point(col=&quot;blue&quot;)</code></pre>
+  geom_point(col=&quot;blue&quot;)
+plot(p)</code></pre>
 <p>*** =sct</p>
-<pre class="{r}"><code>test_object(&quot;p&quot;)
-test_error()
+<pre class="{r}"><code>test_error()
 test_function(&quot;geom_point&quot;,c(&quot;col&quot;))
 success_msg(&quot;Bien joué! vous avez fait votre premier graphique avec ggplot...&quot;)</code></pre>
-<p>— type:MultipleChoiceExercise lang: r xp:50 skills:1 ## 2) Choix de geom</p>
+<p>— type:MultipleChoiceExercise lang:r xp:50 skills:1 key:3e7eb2f40e ## 2) Choix de geom</p>
 <p>On considère le jeu de données <code>diamonds</code>, qui se trouve déjà dans l’environnement.</p>
 <p>*** =instructions</p>
 <p>Examinez les données et répondez à la question suivante. Quel <strong>geom</strong> est le <strong>plus approprié</strong> si je souhaite tracer <code>price</code> (y) en fonction de <code>depth</code> (x)?</p>

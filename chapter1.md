@@ -16,6 +16,7 @@ head(diamonds)
 
 p <- ggplot(_____, aes(x=____)) +
   geom_point(col=_____)
+plot(p)
 ```
 
 *** =instructions
@@ -32,11 +33,11 @@ head(diamonds)
 
 p <- ggplot(diamonds, aes(x=price)) +
   geom_point(col="blue")
+plot(p)
 ```
 
 *** =sct
 ```{r}
-test_object("p")
 test_error()
 test_function("geom_point",c("col"))
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
