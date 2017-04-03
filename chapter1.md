@@ -6,8 +6,11 @@ description : Ces exercices visent a vous familiariser avec le fonctionnement de
 --- type:NormalExercise lang:r xp:50 skills:1 key:0f0c9d8f87
 ## 1) Jeu de données
 
+On considère le jeu de données `diamonds`, qui se trouve déjà dans l'environnement. Le package ggplot2 a déjà été chargé.
+
 *** =sample_code
 ```{r}
+require(ggplot2)
 data(diamonds)
 head(diamonds)
 
