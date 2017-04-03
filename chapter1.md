@@ -9,6 +9,7 @@ description : Ces exercices visent a vous familiariser avec le fonctionnement de
 On considère le jeu de données `diamonds`, fourni par la librairie `ggplot2`.
 
 *** =sample_code
+
 ```{r}
 library(ggplot2)
 data(diamonds)
@@ -39,7 +40,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("geom_point",c("col"))
+test_function("geom_histogram",c("col"))
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
 ```
 
