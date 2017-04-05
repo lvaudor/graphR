@@ -61,10 +61,10 @@ Imaginons que je souhaite produire un **nuage de points** montrant `carat` en fo
 
 *** =instructions
 
-- scale_color_brewer()
-- scale_color_gradient()
-- scale_fill_brewer()
-- scale_fill_gradient()
+- `scale_color_brewer()`
+- `scale_color_gradient()`
+- `scale_fill_brewer()`
+- `scale_fill_gradient()`
 
 *** =sct
 ```{r}

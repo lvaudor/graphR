@@ -151,14 +151,16 @@ data(diamonds)
 
 Examinez le code ci-contre et le graphique qu'il renvoie.
 
+**Corrigez** ce code pour que les effectifs des différentes coupes apparaissent les **uns par dessus les autres** et que les hauteurs soient **normalisées**(paramètre `position`... consultez votre antisèche!!)
+
+
+
 *** =sample_code
 ```{r}
 p <- ggplot(diamonds, aes(x=carat))+
   geom_histogram(bins=10,aes(fill=cut))
 plot(p)
 ```
-**Corrigez** ce code pour que les effectifs des différentes coupes apparaissent les **uns par dessus les autres** et que les hauteurs soient **normalisés**(paramètre `position`... consultez votre antisèche!!)
-
 *** =solution
 ```{r}
 p <- ggplot(diamonds, aes(x=carat))+
