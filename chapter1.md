@@ -81,7 +81,7 @@ test_mc(correct = 1,
 - `p2`, un boxplot montrant **price** (y) en fonction de **cut** (x)
 - `p3`, un barplot montrant les effectifs de **cut** (x)
 
-*** pre_exercise_code
+*** =pre_exercise_code
 ```{r}
 require(ggplot2)
 data(diamonds)
