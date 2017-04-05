@@ -1,6 +1,6 @@
 ---
-title       : graphR 1 - Mapping et facettes
-description : Ces exercices visent a vous familiariser avec le fonctionnement de base de ggplot2
+title       : graphR 3 - Axes, echelles et themes
+description : Ces exercices visent a vous apprendre à paramétrer de manière plus fine les axes et échelles associés à vos graphiques
 
 --- type:NormalExercise lang:r xp:75 skills:1
 ## 1) Etiquettes et transformations d'axes
@@ -95,7 +95,12 @@ plot(p)
 
 `ggplot2` et `diamonds` ont déjà été chargés, et un graphique produit.
 
-Modifiez le code qui vous est fourni ci-contre pour reproduire cette figure. Il s'agit de **modifier le thème** et de **modifier l'échelle colorée** pour que les prix les plus faibles correspondent à la couleur jaune et les prix les plus importants à la couleur bleue.
+Modifiez le code qui vous est fourni ci-contre pour reproduire cette figure. 
+
+Il s'agit de 
+
+- **modifier le thème** 
+- **modifier l'échelle colorée** pour que les prix les plus bas correspondent à la couleur jaune et les prix les plus hauts à la couleur bleue.
 
 
 

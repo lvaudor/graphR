@@ -1,6 +1,6 @@
 ---
 title       : graphR 1 - Mapping et facettes
-description : Ces exercices visent a vous familiariser avec le fonctionnement de base de ggplot2
+description : Ces exercices visent a vous familiariser avec les principes du mapping et des facettes, en vous permettant de représenter davantage d'information sur vos graphiques
 
 --- type:NormalExercise lang:r xp:100 skills:1
 ## 1) Mapping
