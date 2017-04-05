@@ -214,7 +214,7 @@ test_object("p3")
 test_function("ggplot",c("data","mapping"),index=1)
 test_function("ggplot",c("data","mapping"),index=2)
 test_function("ggplot",c("data","mapping"),index=3)
-test_function("geom_point",c("color"))
+#test_function("geom_point",c("color"))
 test_function("geom_boxplot",c("fill"))
 test_function("geom_bar",c("alpha"))
 ```
