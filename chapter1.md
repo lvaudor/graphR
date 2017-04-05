@@ -41,7 +41,8 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("geom_histogram",c("col"))
+test_function("ggplot",c("data","mapping"))
+test_function("geom_histogram",c("fill"))
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
 ```
 
@@ -138,9 +139,9 @@ plot(p3)
 
 *** =sct
 ```{r}
-test_object("p1")
-test_object("p2")
-test_object("p3")
+#test_object("p1")
+#test_object("p2")
+#test_object("p3")
 test_function("ggplot",c("data","mapping"),index=1)
 test_function("ggplot",c("data","mapping"),index=2)
 test_function("ggplot",c("data","mapping"),index=3)
@@ -208,9 +209,9 @@ plot(p3)
 ```
 *** =sct
 ```{r}
-test_object("p1")
-test_object("p2")
-test_object("p3")
+#test_object("p1")
+#test_object("p2")
+#test_object("p3")
 test_function("ggplot",c("data","mapping"),index=1)
 test_function("ggplot",c("data","mapping"),index=2)
 test_function("ggplot",c("data","mapping"),index=3)
@@ -257,7 +258,7 @@ plot(p)
 
 *** =sct
 ```{r}
-test_object("p")
+#test_object("p")
 test_function("ggplot",c("data","mapping"))
 test_function("geom_hist", c("fill"))
 test_function("geom_rug")
