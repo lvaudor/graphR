@@ -5,7 +5,7 @@ description : Ces exercices visent a vous familiariser avec le fonctionnement de
 --- type:NormalExercise lang:r xp:100 skills:1 key:6910f622a9
 ## 1) Mapping
 
-`ggplot2` et `diamonds` ont déjà été chargés.
+`ggplot2` et `diamonds` ont dÃ©jÃ  Ã©tÃ© chargÃ©s.
 
 *** =pre_exercise_code
 ```{r}
@@ -16,12 +16,12 @@ data(diamonds)
 
 *** =instructions
 
-**Complétez** le code ci- contre pour que:
+**ComplÃ©tez** le code ci- contre pour que:
 
-- `p1`, `p2` et `p3` soient trois **nuages de points** représentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
-- la **couleur** des points de `p1` corresponde à la coupe des diamants (`cut`)
-- la **taille** des points de `p2` corresponde à la table des diamants(`table`)
-- `p3` remplisse **les deux conditions précédentes** (couleur fonction de `cut` et taille fonction de `table`)
+- `p1`, `p2` et `p3` soient trois **nuages de points** reprÃ©sentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
+- la **couleur** des points de `p1` corresponde Ã  la coupe des diamants (`cut`)
+- la **taille** des points de `p2` corresponde Ã  la table des diamants(`table`)
+- `p3` remplisse **les deux conditions prÃ©cÃ©dentes** (couleur fonction de `cut` et taille fonction de `table`)
 
 *** =sample_code
 
@@ -62,11 +62,11 @@ plot(p3)
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:524d21b485
-## 2) Paramètres fixes vs paramètres variables
+## 2) ParamÃ¨tres fixes vs paramÃ¨tres variables
 
 <<<<<<< HEAD
 =======
-`ggplot2` et `diamonds` ont déjà été chargés.
+`ggplot2` et `diamonds` ont dÃ©jÃ  Ã©tÃ© chargÃ©s.
 
 >>>>>>> 3cffc5f069b867911abc9897bc1978e10003b51e
 *** =pre_exercise_code
@@ -79,14 +79,14 @@ data(diamonds)
 *** =instructions
 
 <<<<<<< HEAD
-`ggplot2` et `diamonds` ont d�j� �t� charg�s. On reprend le dernier graphique cr��, `p3`. 
+`ggplot2` et `diamonds` ont déjà été chargés. On reprend le dernier graphique créé, `p3`. 
 
-**Modifiez** le code ci-contre pour que la **forme** des points corresponde � une �toile � 6 branches (voir l'antis�che ggplot2...)
+**Modifiez** le code ci-contre pour que la **forme** des points corresponde à une étoile à 6 branches (voir l'antisèche ggplot2...)
 
 =======
-On reprend le dernier graphique créé, `p3`. 
+On reprend le dernier graphique crÃ©Ã©, `p3`. 
 
-**Modifiez** le code ci-contre pour que la **forme** des points corresponde à l'étoile à 6 branches (voir l'antisèche ggplot2...)
+**Modifiez** le code ci-contre pour que la **forme** des points corresponde Ã  l'Ã©toile Ã  6 branches (voir l'antisÃ¨che ggplot2...)
 >>>>>>> 3cffc5f069b867911abc9897bc1978e10003b51e
 
 *** =sample_code
@@ -110,14 +110,14 @@ plot(p3)
 test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_point",c("shape","mapping"))
-success_msg("Oui! Vous pouvez soit définir les paramètres des geoms comme des constantes, ou bien les relier à des variables via le processus de mapping...")
+success_msg("Oui! Vous pouvez soit dÃ©finir les paramÃ¨tres des geoms comme des constantes, ou bien les relier Ã  des variables via le processus de mapping...")
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
-## 3) Esth�tique globale ou de geom
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:30600e01a4
+## 3) Esthétique globale ou de geom
 
-Consid�rez les lignes de codes suivantes:
+Considérez les lignes de codes suivantes:
 
 ```{r}
 p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
@@ -130,7 +130,7 @@ Quelle proposition est **vraie**?
 
 *** =instructions
 
-- la **couleur de remplissage** des boxplots d�pend de `cut`
+- la **couleur de remplissage** des boxplots dépend de `cut`
 - la **couleur** des "rugs" est grise
 - la **couleur de bordure** des boxplots est grise
 - la **couleur de remplissage** des boxplots est grise
@@ -138,10 +138,10 @@ Quelle proposition est **vraie**?
 *** =sct
 ```{r}
 test_mc(correct = 4,
-        feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui d�pend de `cut`",
-                          "Non, la couleur des rugs d�pend de `cut`!",
-                          "Non, la couleur de bordure des boxplots d�pend de `cut`...",
-                          "Oui, bravo! Les param�tres renseign�s dans l'appel � `ggplot()` valent pour l'ensemble des geoms..."))
+        feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui dépend de `cut`",
+                          "Non, la couleur des rugs dépend de `cut`!",
+                          "Non, la couleur de bordure des boxplots dépend de `cut`...",
+                          "Oui, bravo! Les paramètres renseignés dans l'appel à `ggplot()` valent pour l'ensemble des geoms..."))
 p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
   geom_boxplot(fill="grey") +
   geom_rug(aes(color=cut))
