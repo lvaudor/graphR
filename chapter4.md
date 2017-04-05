@@ -2,10 +2,10 @@
 title       : graphR 1 - Mapping et facettes
 description : Ces exercices visent a vous familiariser avec le fonctionnement de base de ggplot2
 
---- type:NormalExercise lang:r xp:50 skills:1
-## 1) Jeu de données
+--- type:NormalExercise lang:r xp:50 skills:1 key:d5b0ebb77b
+## 1) Jeu de donnÃ©es
 
-On considère le jeu de données `diamonds`, fourni par la librairie `ggplot2`.
+On considÃ¨re le jeu de donnÃ©es `diamonds`, fourni par la librairie `ggplot2`.
 
 *** =pre_exercise_code
 ```{r}
@@ -28,8 +28,8 @@ plot(p)
 
 *** =instructions
 
-- **Examinez** le jeu de données `diamonds`
-- **Complétez** le code ci-contre pour  tracer l'histogramme correspondant au prix des diamants (couleur de remplissage: `blue`).
+- **Examinez** le jeu de donnÃ©es `diamonds`
+- **ComplÃ©tez** le code ci-contre pour  tracer l'histogramme correspondant au prix des diamants (couleur de remplissage: `blue`).
 
 *** =solution 
 
@@ -48,5 +48,5 @@ plot(p)
 test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_histogram",c("fill"))
-success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
+success_msg("Bien jouÃ©! vous avez fait votre premier graphique avec ggplot...")
 ```
