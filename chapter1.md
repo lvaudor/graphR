@@ -217,6 +217,11 @@ test_function("geom_bar",c("alpha"))
 success_msg("Bien joué! Quelle joie, vous allez pouvoir customiser tous vos graphiques en rose!")
 ```
 
+
+p <- ggplot(diamonds, aes(x=cut, y=clarity))+
+  geom_jitter(shape=1)
+plot(p)
+
 --- type:NormalExercise lang:r xp:50 skills:1 key:c3ac51eaa9
 ## 5) Superposer des geoms
 
