@@ -2,10 +2,10 @@
 title       : graphR 1 - Mapping et facettes
 description : Ces exercices visent a vous familiariser avec les principes du mapping et des facettes, en vous permettant de représenter davantage d'information sur vos graphiques
 
---- type:NormalExercise lang:r xp:100 skills:1
+--- type:NormalExercise lang:r xp:100 skills:1 key:6910f622a9
 ## 1) Mapping
 
-`ggplot2` et `diamonds` ont déjà été chargés.
+`ggplot2` et `diamonds` ont dÃ©jÃ  Ã©tÃ© chargÃ©s.
 
 *** =pre_exercise_code
 ```{r}
@@ -16,12 +16,12 @@ data(diamonds)
 
 *** =instructions
 
-**Complétez** le code ci- contre pour que:
+**ComplÃ©tez** le code ci- contre pour que:
 
-- `p1`, `p2` et `p3` soient trois **nuages de points** représentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
-- la **couleur** des points de `p1` corresponde à la coupe des diamants (`cut`)
-- la **taille** des points de `p2` corresponde à la table des diamants(`table`)
-- `p3` remplisse **les deux conditions précédentes** (couleur fonction de `cut` et taille fonction de `table`)
+- `p1`, `p2` et `p3` soient trois **nuages de points** reprÃ©sentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
+- la **couleur** des points de `p1` corresponde Ã  la coupe des diamants (`cut`)
+- la **taille** des points de `p2` corresponde Ã  la table des diamants(`table`)
+- `p3` remplisse **les deux conditions prÃ©cÃ©dentes** (couleur fonction de `cut` et taille fonction de `table`)
 
 *** =sample_code
 
@@ -61,7 +61,7 @@ p3 <- ggplot(diamonds, aes(x=carat, y=price))+
 plot(p3)
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1
+--- type:NormalExercise lang:r xp:100 skills:1 key:979e26f73b
 ## 2) Parametres fixes vs parametres variables
 
 *** =pre_exercise_code
@@ -73,9 +73,9 @@ data(diamonds)
 
 *** =instructions
 
-`ggplot2` et `diamonds` ont déjà été chargés. On reprend le dernier graphique créé, `p3`. 
+`ggplot2` et `diamonds` ont dÃ©jÃ  Ã©tÃ© chargÃ©s. On reprend le dernier graphique crÃ©Ã©, `p3`. 
 
-**Modifiez** le code ci-contre pour que la **forme** des points corresponde à une étoile à 6 branches (voir l'antisèche ggplot2...)
+**Modifiez** le code ci-contre pour que la **forme** des points corresponde Ã  une Ã©toile Ã  6 branches (voir l'antisÃ¨che ggplot2...)
 
 
 *** =sample_code
@@ -99,14 +99,14 @@ plot(p3)
 test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_point",c("shape","mapping"))
-success_msg("Oui! Vous pouvez soit définir les paramètres des geoms comme des constantes, ou bien les relier à des variables via le processus de mapping...")
+success_msg("Oui! Vous pouvez soit dÃ©finir les paramÃ¨tres des geoms comme des constantes, ou bien les relier Ã  des variables via le processus de mapping...")
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c256ad22fc
 ## 3) Esthetique globale ou de geom
 
-Considérez les lignes de codes suivantes:
+ConsidÃ©rez les lignes de codes suivantes:
 
 ```{r}
 p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
@@ -119,7 +119,7 @@ Quelle proposition est **vraie**?
 
 *** =instructions
 
-- la **couleur de remplissage** des boxplots dépend de `cut`
+- la **couleur de remplissage** des boxplots dÃ©pend de `cut`
 - la **couleur** des "rugs" est grise
 - la **couleur de bordure** des boxplots est grise
 - la **couleur de remplissage** des boxplots est grise
@@ -127,14 +127,14 @@ Quelle proposition est **vraie**?
 *** =sct
 ```{r}
 test_mc(correct = 4,
-        feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui dépend de `cut`",
-                          "Non, la couleur des rugs dépend de `cut`!",
-                          "Non, la couleur de bordure des boxplots dépend de `cut`...",
-                          "Oui, bravo! Les paramètres renseignés dans l'appel à `ggplot()` valent pour l'ensemble des geoms..."))
+        feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui dÃ©pend de `cut`",
+                          "Non, la couleur des rugs dÃ©pend de `cut`!",
+                          "Non, la couleur de bordure des boxplots dÃ©pend de `cut`...",
+                          "Oui, bravo! Les paramÃ¨tres renseignÃ©s dans l'appel Ã  `ggplot()` valent pour l'ensemble des geoms..."))
 
 ```
 
---- type:NormalExercise lang:r xp:50 skills:1
+--- type:NormalExercise lang:r xp:50 skills:1 key:2c322c7227
 ## 4) Ajustement de la position
 
 
@@ -147,7 +147,7 @@ data(diamonds)
 
 *** =instructions
 
-`ggplot2` et `diamonds` ont déjà été chargés.
+`ggplot2` et `diamonds` ont dÃ©jÃ  Ã©tÃ© chargÃ©s.
 
 Examinez le code ci-contre et le graphique qu'il renvoie.
 
@@ -157,7 +157,7 @@ p <- ggplot(diamonds, aes(x=carat))+
   geom_histogram(bins=10,aes(fill=cut))
 plot(p)
 ```
-**Corrigez** ce code pour que les effectifs des différentes coupes apparaissent les **uns par dessus les autres** et que les hauteurs soient **normalisés**(paramètre `position`... consultez votre antisèche!!)
+**Corrigez** ce code pour que les effectifs des diffÃ©rentes coupes apparaissent les **uns par dessus les autres** et que les hauteurs soient **normalisÃ©s**(paramÃ¨tre `position`... consultez votre antisÃ¨che!!)
 
 *** =solution
 ```{r}
@@ -170,14 +170,14 @@ plot(p)
 test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_histogram", c("bins","position","mapping"))
-success_msg("Oui! Avez-vous pris le temps pour bien comprendre comment le paramètre `position` modifiait la façon dont on peut lire le graphique?")
+success_msg("Oui! Avez-vous pris le temps pour bien comprendre comment le paramÃ¨tre `position` modifiait la faÃ§on dont on peut lire le graphique?")
 ```
 
---- type:NormalExercise lang:r xp:50 skills:1
+--- type:NormalExercise lang:r xp:50 skills:1 key:b6f260cf51
 ## 5) Facettes
 
 
-`ggplot2` et `diamonds` ont déjà été chargés.
+`ggplot2` et `diamonds` ont dÃ©jÃ  Ã©tÃ© chargÃ©s.
 
 *** =pre_exercise_code
 ```{r}
@@ -187,7 +187,7 @@ data(diamonds)
 
 *** =instructions
 
-Complétez le code ci-contre pour produire différentes facettes du même graphique en fonction de la coupe des diamants (en ligne)
+ComplÃ©tez le code ci-contre pour produire diffÃ©rentes facettes du mÃªme graphique en fonction de la coupe des diamants (en ligne)
 
 *** =sample_code
 ```{r}
@@ -211,6 +211,6 @@ test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_point")
 test_function("facet_grid",c("facets"))
-success_msg("Eh oui, bien joué! Les facettes , c'est trop de la boule!")
+success_msg("Eh oui, bien jouÃ©! Les facettes , c'est trop de la boule!")
 ```
 

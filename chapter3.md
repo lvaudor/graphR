@@ -2,7 +2,7 @@
 title       : graphR 3 - Axes, echelles et themes
 description : Ces exercices visent a vous apprendre à paramétrer de manière plus fine les axes et échelles associés à vos graphiques
 
---- type:NormalExercise lang:r xp:75 skills:1
+--- type:NormalExercise lang:r xp:75 skills:1 key:39abd4c1e5
 ## 1) Etiquettes et transformations d'axes
 
 
@@ -51,7 +51,7 @@ test_function("labs", c("x","y"))
 test_function("scale_y_log10")
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50
+--- type:MultipleChoiceExercise lang:r xp:50 key:f2d8bede10
 ## 2) Types d'echelles colorees
 
 Imaginons que je souhaite produire un **nuage de points** montrant `carat` en fonction de `cut`, en faisant **varier la couleur en fonction de `price`**. 
@@ -76,7 +76,7 @@ test_mc(correct = 3,
 ```
 
 
---- type:NormalExercise lang:r xp:50 skills:1
+--- type:NormalExercise lang:r xp:50 skills:1 key:8e206adddb
 ## 3) Themes et echelles colorees
 
 *** =pre_exercise_code
