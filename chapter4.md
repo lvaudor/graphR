@@ -1,12 +1,12 @@
 ---
 title       : graphR 4 - Statistiques et modeles
-description : Ces exercices visent a montrer les fonctions de ggplot2 qui permettent d'ajouter des informations statistiques ou des modeles de regression ‡ vos graphiques
+description : Ces exercices visent a montrer les fonctions de ggplot2 qui permettent d'ajouter des informations statistiques ou des modeles de regression √† vos graphiques
 
---- type:NormalExercise lang:r xp:50 skills:1 
+--- type:NormalExercise lang:r xp:50 skills:1 key:1244c2331e
 ## 1) Rajout d'un nuage de points montrant les moyennes
 
 
-`ggplot2` et `diamonds` ont dÈj‡ ÈtÈ chargÈs.
+`ggplot2` et `diamonds` ont d√©j√† √©t√© charg√©s.
 
 *** =pre_exercise_code
 ```{r}
@@ -16,7 +16,7 @@ data(diamonds)
 
 *** = instructions
 
-**ComplÈtez** le code ci-contre pour rajouter des **points bleus** montrant les moyennes de prix par coupe de diamant
+**Compl√©tez** le code ci-contre pour rajouter des **points bleus** montrant les moyennes de prix par coupe de diamant
 
 *** =sample_code
 
@@ -41,12 +41,12 @@ test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_boxplot",c("fill"))
 test_function("stat_summary",c("fun","color"))
-success_msg("Oui! Visiblement, le prix d'un diamant est peu corrÈlÈ ‡ la perfection de sa coupe!")
+success_msg("Oui! Visiblement, le prix d'un diamant est peu corr√©l√© √† la perfection de sa coupe!")
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50
-## 2) Des modËles par milliers?
+--- type:MultipleChoiceExercise lang:r xp:50 key:cc4cc85035
+## 2) Des mod√®les par milliers?
 
 **Examinez** le code suivant:
 
@@ -58,28 +58,28 @@ plot(p)
 ```
 *** =instructions
 
-Au vu de ces commandes, **combien de droites de rÈgression** s'attendrait-on ‡ voir sur le graphique correspondant?
+Au vu de ces commandes, **combien de droites de r√©gression** s'attendrait-on √† voir sur le graphique correspondant?
 
 - 5, autant que de niveaux de `cut`
 - 8, autant que de niveaux de `clarity`
-- 1, i.e. un modËle global pour l'ensemble des donnÈes
-- 40, i.e. le nombre de niveaux de `cut` multipliÈ par le nombre de niveaux de `clarity`
+- 1, i.e. un mod√®le global pour l'ensemble des donn√©es
+- 40, i.e. le nombre de niveaux de `cut` multipli√© par le nombre de niveaux de `clarity`
 
 *** =sct
 ```{r}
 test_mc(correct = 2,
         feedback_msgs = c("Non, `cut` ne joue que sur la couleur des points",
-                          "Oui! 8 niveaux, cela fait un graphique dÈj‡ bien assez compliquÈ comme Áa!!",
-                          "Non, `clarity` fait partie des esthÈtiques de `geom_smooth`.",
+                          "Oui! 8 niveaux, cela fait un graphique d√©j√† bien assez compliqu√© comme √ßa!!",
+                          "Non, `clarity` fait partie des esth√©tiques de `geom_smooth`.",
                           "Ouhla, non! `cut` ne joue que sur la couleur des points..."))
 
 ```
 
---- type:NormalExercise lang:r xp:50 skills:1 
+--- type:NormalExercise lang:r xp:50 skills:1 key:9fbf20c316
 ## 3) Modeles et facettes: youplaboum!
 
 
-`ggplot2` et le jeu de donnÈes `txhousing` ont dÈj‡ ÈtÈ chargÈs. `txhousing` contient des donnÈes quant ‡ des ventes immobiliËres au texas entre 2000 et 2015.
+`ggplot2` et le jeu de donn√©es `txhousing` ont d√©j√† √©t√© charg√©s. `txhousing` contient des donn√©es quant √† des ventes immobili√®res au texas entre 2000 et 2015.
 
 
 *** =pre_exercise_code
@@ -90,10 +90,10 @@ data(txhousing)
 
 *** = instructions
 
-**ComplÈtez** le code ci-contre pour 
+**Compl√©tez** le code ci-contre pour 
 
-- crÈer des **facettes** du graphique en fonction de la variable `city`
-- faire en sorte que les **Èchelles** des diffÈrentes facettes soient **indÈpendantes** les unes des autres (voir l'aide de `facet_wrap`...)
+- cr√©er des **facettes** du graphique en fonction de la variable `city`
+- faire en sorte que les **√©chelles** des diff√©rentes facettes soient **ind√©pendantes** les unes des autres (voir l'aide de `facet_wrap`...)
 
 *** =sample_code
 
