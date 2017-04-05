@@ -2,10 +2,10 @@
 title       : graphR 1 - Mapping et facettes
 description : Ces exercices visent a vous familiariser avec le fonctionnement de base de ggplot2
 
---- type:NormalExercise lang:r xp:100 skills:1
+--- type:NormalExercise lang:r xp:100 skills:1 key:6910f622a9
 ## 1) Mapping
 
-`ggplot2` et `diamonds` ont dÈj‡ ÈtÈ chargÈs.
+`ggplot2` et `diamonds` ont d√©j√† √©t√© charg√©s.
 
 *** =pre_exercise_code
 ```{r}
@@ -16,12 +16,12 @@ data(diamonds)
 
 *** =instructions
 
-**ComplÈtez** le code ci- contre pour que:
+**Compl√©tez** le code ci- contre pour que:
 
-- `p1`, `p2` et `p3` soient trois **nuages de points** reprÈsentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
-- la **couleur** des points de `p1` corresponde ‡ la coupe des diamants (`cut`)
-- la **taille** des points de `p2` corresponde ‡ la table des diamants(`table`)
-- `p3` remplisse **les deux conditions prÈcÈdentes** (couleur fonction de `cut` et taille fonction de `table`)
+- `p1`, `p2` et `p3` soient trois **nuages de points** repr√©sentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
+- la **couleur** des points de `p1` corresponde √† la coupe des diamants (`cut`)
+- la **taille** des points de `p2` corresponde √† la table des diamants(`table`)
+- `p3` remplisse **les deux conditions pr√©c√©dentes** (couleur fonction de `cut` et taille fonction de `table`)
 
 *** =sample_code
 
@@ -61,10 +61,10 @@ p3 <- ggplot(diamonds, aes(x=carat, y=price))+
 plot(p3)
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1
-## 2) ParamËtres fixes vs paramËtres variables
+--- type:NormalExercise lang:r xp:100 skills:1 key:524d21b485
+## 2) Param√®tres fixes vs param√®tres variables
 
-`ggplot2` et `diamonds` ont dÈj‡ ÈtÈ chargÈs.
+`ggplot2` et `diamonds` ont d√©j√† √©t√© charg√©s.
 
 *** =pre_exercise_code
 ```{r}
@@ -75,9 +75,9 @@ data(diamonds)
 
 *** =instructions
 
-On reprend le dernier graphique crÈÈ, `p3`. 
+On reprend le dernier graphique cr√©√©, `p3`. 
 
-**Modifiez** le code ci-contre pour que la **forme** des points corresponde ‡ l'Ètoile ‡ 6 branches (voir l'antisËche ggplot2...)
+**Modifiez** le code ci-contre pour que la **forme** des points corresponde √† l'√©toile √† 6 branches (voir l'antis√®che ggplot2...)
 
 *** =sample_code
 
@@ -102,5 +102,5 @@ plot(p3)
 test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_point",c("shape","mapping"))
-success_msg("Oui! Vous pouvez soit dÈfinir les paramËtres des geoms comme des constantes, ou bien les relier ‡ des variables via le processus de mapping...")
+success_msg("Oui! Vous pouvez soit d√©finir les param√®tres des geoms comme des constantes, ou bien les relier √† des variables via le processus de mapping...")
 ```
