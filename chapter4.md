@@ -118,7 +118,7 @@ plot(p)
 ```{r}
 test_error()
 test_function("ggplot",c("data","mapping"))
-test_function("geom_point",c("col"))
+test_function("geom_line",)
 test_function("geom_smooth")
 test_function("facet_wrap",c("facets","scales"))
 ```
