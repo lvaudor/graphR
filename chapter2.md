@@ -126,15 +126,19 @@ Quelle proposition est **vraie**?
 
 *** =sct
 ```{r}
+
+require(ggplot2)
+data(diamonds)
+p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
+ geom_boxplot(fill="grey") +
+ geom_rug(aes(color=cut))
+plot(p)
+
 test_mc(correct = 4,
         feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui dépend de `cut`",
                           "Non, la couleur des rugs dépend de `cut`!",
                           "Non, la couleur de bordure des boxplots dépend de `cut`...",
                           "Oui, bravo! Les paramètres renseignés dans l'appel à `ggplot()` valent pour l'ensemble des geoms..."))
-# require(ggplot2)
-# data(diamonds)
-# p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
-#   geom_boxplot(fill="grey") +
-#   geom_rug(aes(color=cut))
-# plot(p)
+
+
 ```
