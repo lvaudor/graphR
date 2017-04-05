@@ -64,8 +64,6 @@ plot(p3)
 --- type:NormalExercise lang:r xp:100 skills:1
 ## 2) Paramètres fixes vs paramètres variables
 
-`ggplot2` et `diamonds` ont déjà été chargés.
-
 *** =pre_exercise_code
 ```{r}
 require(ggplot2)
@@ -75,9 +73,10 @@ data(diamonds)
 
 *** =instructions
 
-On reprend le dernier graphique créé, `p3`. 
+`ggplot2` et `diamonds` ont déjà été chargés. On reprend le dernier graphique créé, `p3`. 
 
-**Modifiez** le code ci-contre pour que la **forme** des points corresponde à l'étoile à 6 branches (voir l'antisèche ggplot2...)
+**Modifiez** le code ci-contre pour que la **forme** des points corresponde à une étoile à 6 branches (voir l'antisèche ggplot2...)
+
 
 *** =sample_code
 
@@ -86,8 +85,6 @@ p3 <- ggplot(diamonds, aes(x=carat, y=price))+
   geom_point(aes(size=table, color=cut))
 plot(p3)
 ```
-
-
 
 *** =solution 
 
@@ -103,4 +100,39 @@ test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_point",c("shape","mapping"))
 success_msg("Oui! Vous pouvez soit définir les paramètres des geoms comme des constantes, ou bien les relier à des variables via le processus de mapping...")
+```
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1
+## 3) Esthétique globale ou de geom
+
+Considérez les lignes de codes suivantes:
+
+```{r}
+p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
+  geom_boxplot(fill="grey") +
+  geom_rug()
+plot(p)
+```
+
+Quelle proposition est **vraie**?
+
+*** =instructions
+
+- la **couleur de remplissage** des boxplots dépend de `cut`
+- la **couleur** des "rugs" est grise
+- la **couleur de bordure** des boxplots est grise
+- la **couleur de remplissage** des boxplots est grise
+
+*** =sct
+```{r}
+test_mc(correct = 4,
+        feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui dépend de `cut`",
+                          "Non, la couleur des rugs dépend de `cut`!",
+                          "Non, la couleur de bordure des boxplots dépend de `cut`...",
+                          "Oui, bravo! Les paramètres renseignés dans l'appel à `ggplot()` valent pour l'ensemble des geoms..."))
+p <- ggplot(diamonds, aes(x=cut, y=carat, color=cut))+
+  geom_boxplot(fill="grey") +
+  geom_rug(aes(color=cut))
+plot(p)
 ```

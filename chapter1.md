@@ -231,7 +231,7 @@ data(diamonds)
 
 *** =instructions
 
-**Complétez le code** pour représenter la variable `price` du jeu de données `diamonds` en **superposant** deux geoms:
+**Complétez le code** pour représenter la variable `table` du jeu de données `diamonds` en **superposant** deux geoms:
 
 - un geom de type **histogram**, et de couleur de remplissage jaune
 - un geom de type **rug**
@@ -247,7 +247,7 @@ plot(p)
 
 *** =solution
 ```{r}
-p <- ggplot(diamonds, aes(x=price)) +
+p <- ggplot(diamonds, aes(x=table)) +
   geom_histogram(fill="yellow") +
   geom_rug()
 plot(p)
