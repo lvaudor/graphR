@@ -62,7 +62,7 @@ plot(p3)
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1
-## 2) Paramètres fixes vs paramètres variables
+## 2) Parametres fixes vs parametres variables
 
 *** =pre_exercise_code
 ```{r}
@@ -104,7 +104,7 @@ success_msg("Oui! Vous pouvez soit définir les paramètres des geoms comme des co
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1
-## 3) Esthétique globale ou de geom
+## 3) Esthetique globale ou de geom
 
 Considérez les lignes de codes suivantes:
 

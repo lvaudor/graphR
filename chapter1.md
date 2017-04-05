@@ -4,7 +4,7 @@ description : Ces exercices visent a vous familiariser avec le fonctionnement de
 
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:0f0c9d8f87
-## 1) Jeu de données
+## 1) Jeu de donnees
 
 On considère le jeu de données `diamonds`, fourni par la librairie `ggplot2`.
 
@@ -151,7 +151,7 @@ success_msg("Bien! Il y a encore bien d'autres geoms disponibles, mais `point` e
 
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:f9f76cfd80
-## 4) Paramétrer des geoms
+## 4) Parametrer des geoms
 
 `ggplot2` et `diamonds` ont déjà été chargés.
 
