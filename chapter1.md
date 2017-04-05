@@ -139,9 +139,7 @@ plot(p3)
 
 *** =sct
 ```{r}
-#test_object("p1")
-#test_object("p2")
-#test_object("p3")
+test_error()
 test_function("ggplot",c("data","mapping"),index=1)
 test_function("ggplot",c("data","mapping"),index=2)
 test_function("ggplot",c("data","mapping"),index=3)
@@ -209,15 +207,14 @@ plot(p3)
 ```
 *** =sct
 ```{r}
-#test_object("p1")
-#test_object("p2")
-#test_object("p3")
+test_error()
 test_function("ggplot",c("data","mapping"),index=1)
 test_function("ggplot",c("data","mapping"),index=2)
 test_function("ggplot",c("data","mapping"),index=3)
 test_function("geom_point",c("color"))
 test_function("geom_boxplot",c("fill"))
 test_function("geom_bar",c("alpha"))
+success_msg("Bien joué! Quelle joie, vous allez pouvoir customiser tous vos graphiques en rose!")
 ```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:c3ac51eaa9
@@ -258,11 +255,11 @@ plot(p)
 
 *** =sct
 ```{r}
-#test_object("p")
+test_error()
 test_function("ggplot",c("data","mapping"))
-test_function("geom_hist", c("fill"))
+test_function("geom_histogram", c("fill"))
 test_function("geom_rug")
-success_msg("Bravo!")
+success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment sympas!...")
 ```
 
 
