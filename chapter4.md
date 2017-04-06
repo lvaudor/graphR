@@ -44,6 +44,9 @@ test_function("stat_summary",c("fun","color"))
 success_msg("Oui! Visiblement, le prix d'un diamant est peu corrélé à la perfection de sa coupe!")
 ```
 
+*** =hint
+
+Il y a 2 arguments à spécifier dans `stat_summary()`: `fun` et `geom`
 
 --- type:MultipleChoiceExercise lang:r xp:50 key:cc4cc85035
 ## 2) Des modèles par milliers?
@@ -74,6 +77,9 @@ test_mc(correct = 2,
                           "Ouhla, non! `cut` ne joue que sur la couleur des points..."))
 
 ```
+
+*** =hint
+`cut` ne joue que sur le `geom_point()` et non sur le graphique dans son ensemble...
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:9fbf20c316
 ## 3) Modeles et facettes: youplaboum!
@@ -118,9 +124,10 @@ plot(p)
 ```{r}
 test_error()
 test_function("ggplot",c("data","mapping"))
-test_function("geom_line",)
+test_function("geom_line")
 test_function("geom_smooth")
 test_function("facet_wrap",c("facets","scales"))
+success_msg("Oui, bravo! Avez-vous remarqué comme la création de facettes affecte l'ensemble du graphique (et notamment le `geom_smooth()`? Vous pouvez fermer cette fenêtre et double-cliquer sur le graphique si vous voulez l'examiner de plus près...")
 ```
 
 

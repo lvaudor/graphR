@@ -46,6 +46,9 @@ test_function("geom_histogram",c("fill"))
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
 ```
 
+*** =hint
+Avez-vous bien spécifié le nom du tableau de données (`diamonds`, sans guillemets), le nom de la variable (`price`, sans guillemets) et la valeur du paramètre `fill` ("blue")?
+
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:3e7eb2f40e
 ## 2) Choix de geom
 
@@ -80,6 +83,8 @@ test_mc(correct = 1,
                           "Non, un boxplot serait approprié pour une variable x catégorielle..."))
 ```
 
+*** =hint
+Les deux variables sont numériques et continues...
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:86589879d3
 ## 3) Geom en tous genres
@@ -92,7 +97,7 @@ test_mc(correct = 1,
 
 - `p1`, un nuage de points montrant **price** (y) en fonction de **carat** (x)
 - `p2`, un boxplot montrant **price** (y) en fonction de **cut** (x)
-- `p3`, un barplot (geom_bar) montrant les effectifs de **cut** (x)
+- `p3`, un barplot (`geom_bar`) montrant les effectifs de **cut** (x)
 
 *** =pre_exercise_code
 ```{r}
@@ -148,6 +153,9 @@ test_function("geom_boxplot")
 test_function("geom_bar")
 success_msg("Bien! Il y a encore bien d'autres geoms disponibles, mais `point` et `boxplot` sont des incontournables...")
 ```
+
+*** =hint
+Il y a à chaque fois 3 éléments importants à spécifier: le **jeu de données**, les **variables x et** (éventuellement) **y**, et la **nature du geom**!
 
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:f9f76cfd80
@@ -217,10 +225,8 @@ test_function("geom_bar",c("alpha"))
 success_msg("Bien joué! Quelle joie, vous allez pouvoir customiser tous vos graphiques en rose!")
 ```
 
-
-p <- ggplot(diamonds, aes(x=cut, y=clarity))+
-  geom_jitter(shape=1)
-plot(p)
+*** =hint
+Avez-vous bien trouvé le nom des paramètres qui vous intéressent? `color` pour la couleur de bordure, `fill` pour la couleur de remplissage, et `alpha` (valeurs entre 0 et 1) pour la transparence...
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:c3ac51eaa9
 ## 5) Superposer des geoms
@@ -267,4 +273,5 @@ test_function("geom_rug")
 success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment sympas!...")
 ```
 
-
+*** =hint
+Avez-vous bien fait appel à la fonction `ggplot()` (pour créer le graphique), à `geom_histogram()` pour tracer l'histogramme, et à `geom_rug`  pour rajouter le "rug"?

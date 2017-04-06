@@ -42,6 +42,7 @@ p <- ggplot(diamonds, aes(x=cut, y=price)) +
   scale_x_discrete(labels=c("Correcte","Bonne","Très bonne","Premium","Idéale"))
 plot(p)
 ```
+
 *** =sct
 ```{r}
 test_error()
@@ -50,6 +51,14 @@ test_function("geom_boxplot")
 test_function("labs", c("x","y"))
 test_function("scale_y_log10")
 ```
+
+
+*** =hint
+Avez-vous bien utilisé 
+
+- la fonction `labs` pour les étiquettes x et y
+- la fonction `scale_y_truc()` (remplacez `truc` par la formule appropriée) pour la transformation de l'axe y
+- la fonction `scale_x_bidule()` (remplacez `bidule` par la formul appropriée) pour la transformation de l'axe x
 
 --- type:MultipleChoiceExercise lang:r xp:50 key:f2d8bede10
 ## 2) Types d'echelles colorees
@@ -129,4 +138,8 @@ test_function("ggplot",c("data","mapping"))
 test_function("theme_minimal")
 test_function("scale_color_gradient",c("low","high"))
 ```
+
+*** =hint 
+
+Avez-vous bien spécifié le bon thème (`theme_minimal()`) et utilisé la fonction `scale_color_gradient()`?
 

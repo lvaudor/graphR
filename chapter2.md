@@ -13,15 +13,14 @@ require(ggplot2)
 data(diamonds)
 ```
 
-
 *** =instructions
 
 **Complétez** le code ci- contre pour que:
 
 - `p1`, `p2` et `p3` soient trois **nuages de points** représentant le **prix** (`price`) en fonction du **nombre de carats** (`carat`)
-- la **couleur** des points de `p1` corresponde à la coupe des diamants (`cut`)
-- la **taille** des points de `p2` corresponde à la table des diamants(`table`)
-- `p3` remplisse **les deux conditions précédentes** (couleur fonction de `cut` et taille fonction de `table`)
+- la **couleur** du `geom_point()` de `p1` corresponde à la coupe des diamants (`cut`)
+- la **taille** du `geom_point()` de `p2` corresponde à la table des diamants(`table`)
+- **les deux conditions précédentes** soient remplies pour le `geom_point()` de `p3` 
 
 *** =sample_code
 
@@ -60,6 +59,20 @@ p3 <- ggplot(diamonds, aes(x=carat, y=price))+
   geom_point(aes(size=table, color=cut))
 plot(p3)
 ```
+
+*** =sct
+```{r}
+test_error()
+test_function("ggplot",c("data","mapping"),index=1)
+test_function("ggplot",c("data","mapping"),index=2)
+test_function("ggplot",c("data","mapping"),index=3)
+test_function("geom_point",c("mapping"),index=1)
+test_function("geom_point",c("mapping"),index=2)
+test_function("geom_point",c("mapping"),index=3)
+```
+
+*** =hint
+Avez-vous bien fait appel à la fonction `aes()`? Cette fonction peut prendre plusieurs arguments, séparés par une virgule...
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:979e26f73b
 ## 2) Parametres fixes vs parametres variables
@@ -102,6 +115,8 @@ test_function("geom_point",c("shape","mapping"))
 success_msg("Oui! Vous pouvez soit définir les paramètres des geoms comme des constantes, ou bien les relier à des variables via le processus de mapping...")
 ```
 
+*** hint
+Si vous définissez le paramètre comme une constante, vous devez le spécifier à l'extérieur de la fonction `aes()`...
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c256ad22fc
 ## 3) Esthetique globale ou de geom
@@ -133,6 +148,10 @@ test_mc(correct = 4,
                           "Oui, bravo! Les paramètres renseignés dans l'appel à `ggplot()` valent pour l'ensemble des geoms..."))
 
 ```
+
+*** =hint
+Portez attention à l'endroit où sont définies les esthétiques (dans `ggplot()` ou dans un `geom_xxx()`?) et au paramètre considéré (couleur de bordure `color` ou couleur de remplissage `fill`?)
+
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:2c322c7227
 ## 4) Ajustement de la position
@@ -167,6 +186,7 @@ p <- ggplot(diamonds, aes(x=carat))+
   geom_histogram(bins=10, position="fill",aes(fill=cut))
 plot(p)
 ```
+
 *** =sct
 ```{r}
 test_error()
@@ -174,6 +194,12 @@ test_function("ggplot",c("data","mapping"))
 test_function("geom_histogram", c("bins","position","mapping"))
 success_msg("Oui! Avez-vous pris le temps pour bien comprendre comment le paramètre `position` modifiait la façon dont on peut lire le graphique?")
 ```
+
+*** =hint
+Le paramètre de position **n'est pas** une esthétique.
+
+Vous pouvez voir les valeurs possibles pour ce paramètre sur votre **antisèche ggplot** (2ème page, "Position Adjustments")
+
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:b6f260cf51
 ## 5) Facettes
@@ -215,4 +241,8 @@ test_function("geom_point")
 test_function("facet_grid",c("facets"))
 success_msg("Eh oui, bien joué! Les facettes , c'est trop de la boule!")
 ```
+
+*** =hint
+Avez-vous bien fait en sorte que les facettes soient en ligne et non en colonne dans l'appel à la fonction `facet_grid()`?
+
 
