@@ -2,7 +2,7 @@
 title       : graphR 5 - Cartes
 description : Ces exercices visent a montrer les fonctions de ggmap, petit cousin de ggplot2, vous permet de créer des cartes...
 
---- type:NormalExercise lang:r xp:50 skills:1
+--- type:NormalExercise lang:r xp:50 skills:1 key:5ce37fe522
 ## 1) Fond de carte
 
 
