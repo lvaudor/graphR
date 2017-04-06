@@ -59,9 +59,10 @@ p <- ggplot(diamonds, aes(x=carat, y=price)) +
   geom_smooth(method="lm", aes(linetype=clarity))
 plot(p)
 ```
-*** =instructions
 
 Au vu de ces commandes, **combien de droites de régression** s'attendrait-on à voir sur le graphique correspondant?
+
+*** =instructions
 
 - 5, autant que de niveaux de `cut`
 - 8, autant que de niveaux de `clarity`
