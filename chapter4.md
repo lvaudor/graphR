@@ -16,7 +16,7 @@ data(diamonds)
 
 *** = instructions
 
-**Complétez** le code ci-contre pour rajouter des **points bleus** montrant les moyennes de prix par coupe de diamant
+**Complétez** le code ci-contre pour rajouter des **points bleus** montrant les **moyennes de prix** (donc moyennes de y) par coupe de diamant
 
 *** =sample_code
 
@@ -31,7 +31,7 @@ plot(p)
 ```{r}
 p <- ggplot(diamonds, aes(x=cut, y=price)) +
   geom_boxplot(fill="pink")+
-  stat_summary(fun="mean", geom="point",color="blue")
+  stat_summary(fun.y="mean",color="blue")
 plot(p)
 ```
 
@@ -46,7 +46,7 @@ success_msg("Oui! Visiblement, le prix d'un diamant est peu corrélé à la perf
 
 *** =hint
 
-Il y a 2 arguments à spécifier dans `stat_summary()`: `fun` et `geom`
+Il y a 2 arguments à spécifier dans `stat_summary()`: `fun.y` et `color` (par défaut, pour la fonction `stat_summary()`,`geom="point"`).
 
 --- type:MultipleChoiceExercise lang:r xp:50 key:cc4cc85035
 ## 2) Des modèles par milliers?
@@ -72,7 +72,7 @@ Au vu de ces commandes, **combien de droites de régression** s'attendrait-on à
 ```{r}
 test_mc(correct = 2,
         feedback_msgs = c("Non, `cut` ne joue que sur la couleur des points",
-                          "Oui! 8 niveaux, cela fait un graphique déjà bien assez compliqué comme ça!!",
+                          "Oui! 8 niveaux, cela fait un graphique déjà bien assez chargé comme ça!!",
                           "Non, `clarity` fait partie des esthétiques de `geom_smooth`.",
                           "Ouhla, non! `cut` ne joue que sur la couleur des points..."))
 
@@ -130,4 +130,7 @@ test_function("facet_wrap",c("facets","scales"))
 success_msg("Oui, bravo! Avez-vous remarqué comme la création de facettes affecte l'ensemble du graphique (et notamment le `geom_smooth()`? Vous pouvez fermer cette fenêtre et double-cliquer sur le graphique si vous voulez l'examiner de plus près...")
 ```
 
+*** =hint
+Avez-vous correctement spécifié l'argument de `facet_wrap()`? Consultez votre antisèche....
 
+Avez-vous trouvé dans l'aide de `facet_wrap` comment faire en sorte que les échelles soient indépendantes ("free"...)?

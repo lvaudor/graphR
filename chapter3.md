@@ -18,9 +18,10 @@ data(diamonds)
 `ggplot2` et `diamonds` ont déjà été chargés.
 
 **Modifiez** le code ci-contre pour que: 
-- les étiquettes d'axes soient "coupe" (en x) et "prix" (en y)
-- l'échelle des y soient transformée par une **transformation log10**
-- les valeurs de l'axe x soient traduites (en "Correcte","Bonne","Très bonne","Premium","Idéale")
+
+- les **étiquettes d'axes** soient "coupe" (en x) et "prix" (en y)
+- l'**échelle des y** soient transformée par une **transformation log10**
+- les **valeurs de l'axe x** soient traduites (en "Correcte","Bonne","Très bonne","Premium","Idéale")
 
 *** =sample_code
 ```{r}
@@ -50,15 +51,20 @@ test_function("ggplot",c("data","mapping"))
 test_function("geom_boxplot")
 test_function("labs", c("x","y"))
 test_function("scale_y_log10")
+test_function("scale_x_discrete",c("labels"))
+success_msg("Oui! Vous savez maintenant customiser vos axes!!")
 ```
 
 
 *** =hint
+
 Avez-vous bien utilisé 
 
-- la fonction `labs` pour les étiquettes x et y
-- la fonction `scale_y_truc()` (remplacez `truc` par la formule appropriée) pour la transformation de l'axe y
-- la fonction `scale_x_bidule()` (remplacez `bidule` par la formul appropriée) pour la transformation de l'axe x
+- la fonction `labs` pour les **étiquettes x et y**
+- la fonction `scale_y_truc()` (remplacez `truc` par la formule appropriée) pour la **transformation de l'axe y**
+- la fonction `scale_x_bidule()` (remplacez `bidule` par la formul appropriée) pour la **transformation de l'axe x**
+
+**Consultez l'antisèche ggplot2!!!**
 
 --- type:MultipleChoiceExercise lang:r xp:50 key:f2d8bede10
 ## 2) Types d'echelles colorees
@@ -71,17 +77,17 @@ Imaginons que je souhaite produire un **nuage de points** montrant `carat` en fo
 *** =instructions
 
 - `scale_color_brewer()`
-- `scale_color_gradient()`
 - `scale_fill_brewer()`
+- `scale_color_gradient()`
 - `scale_fill_gradient()`
 
 *** =sct
 ```{r}
 test_mc(correct = 3,
-        feedback_msgs = c("Non, `brewer` s'applique à des échelles discrètes, or ici `price` est continu",
-                          "Non, ici on s'intéresse à une couleur de bordure et non une couleur de remplissage",
-                          "Oui, bravo! Retenez cette solution pour l'exercice suivant...",
-                          "Non, car ici on s'intéresse à une couleur de remplissage et à une échelle continue..."))
+        feedback_msgs = c("Non, `brewer` s'applique à des échelles **discrètes**, or `price` est **continu**",
+                          "Non, car on s'intéresse à une couleur de **bordure** et non à une couleur de remplissage",
+                          "Oui, bravo! **Retenez cette solution** pour l'exercice suivant...",
+                          "Non, car on s'intéresse à une couleur de **bordure** et non à une couleur de remplissage"))
 ```
 
 
@@ -109,7 +115,7 @@ Modifiez le code qui vous est fourni ci-contre pour reproduire cette figure.
 Il s'agit de 
 
 - **modifier le thème** 
-- **modifier l'échelle colorée** pour que les prix les plus bas correspondent à la couleur jaune et les prix les plus hauts à la couleur bleue.
+- **modifier l'échelle colorée** pour que les prix **les plus bas** correspondent à la couleur **jaune** et les prix **les plus hauts** à la couleur **bleue**.
 
 
 

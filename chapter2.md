@@ -173,7 +173,7 @@ data(diamonds)
 
 Examinez le code ci-contre et le graphique qu'il renvoie.
 
-**Corrigez** ce code pour que les effectifs des différentes coupes apparaissent les **uns par dessus les autres** et que les hauteurs soient **normalisées**(paramètre `position`... consultez votre antisèche!!)
+**Corrigez** ce code pour que les effectifs des différentes coupes apparaissent les **uns par dessus les autres** et que les hauteurs soient **normalisées** (paramètre `position`... consultez votre antisèche!!)
 
 
 
@@ -218,7 +218,7 @@ data(diamonds)
 
 *** =instructions
 
-Complétez le code ci-contre pour produire différentes facettes du même graphique en fonction de la coupe des diamants (en ligne)
+**Complétez** le code ci-contre pour produire **différentes facettes** du même graphique **en fonction de la coupe** des diamants (**en ligne**)
 
 *** =sample_code
 ```{r}
@@ -242,10 +242,10 @@ test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_point")
 test_function("facet_grid",c("facets"))
-success_msg("Eh oui, bien joué! Les facettes , c'est trop de la boule!")
+success_msg("Eh oui, bien joué! Les facettes , c'est trop de la boule :-) !")
 ```
 
 *** =hint
-Avez-vous bien fait en sorte que les facettes soient en ligne et non en colonne dans l'appel à la fonction `facet_grid()`?
+Avez-vous bien fait en sorte que les facettes soient **en ligne** et non **en colonne** dans l'appel à la fonction `facet_grid()`?
 
 
