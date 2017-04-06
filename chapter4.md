@@ -40,7 +40,7 @@ plot(p)
 test_error()
 test_function("ggplot",c("data","mapping"))
 test_function("geom_boxplot",c("fill"))
-test_function("stat_summary",c("fun","color"))
+test_function("stat_summary",c("fun.y","color"))
 success_msg("Oui! Visiblement, le prix d'un diamant est peu corrélé à la perfection de sa coupe!")
 ```
 
