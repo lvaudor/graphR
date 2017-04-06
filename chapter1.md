@@ -62,7 +62,7 @@ data(diamonds)
 Pour en apprendre plus sur le contenu de ce jeu de données vous pouvez faire
 
 ```{r}
-help(diamonds)
+str(diamonds)
 ```
 
 
@@ -226,7 +226,11 @@ success_msg("Bien joué! Quelle joie, vous allez pouvoir customiser tous vos gra
 ```
 
 *** =hint
-Avez-vous bien trouvé le nom des paramètres qui vous intéressent? `color` pour la couleur de bordure, `fill` pour la couleur de remplissage, et `alpha` (valeurs entre 0 et 1) pour la transparence...
+Avez-vous bien trouvé le nom des paramètres qui vous intéressent?
+
+-`color` pour la couleur de bordure, 
+- `fill` pour la couleur de remplissage,
+- `alpha` (valeurs entre 0 et 1) pour la transparence...
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:c3ac51eaa9
 ## 5) Superposer des geoms
@@ -274,4 +278,8 @@ success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment 
 ```
 
 *** =hint
-Avez-vous bien fait appel à la fonction `ggplot()` (pour créer le graphique), à `geom_histogram()` pour tracer l'histogramme, et à `geom_rug`  pour rajouter le "rug"?
+Avez-vous bien fait appel 
+
+- à la fonction `ggplot()` (pour créer le graphique), 
+- à `geom_histogram()` pour tracer l'histogramme,
+- à `geom_rug`  pour rajouter le "rug"?

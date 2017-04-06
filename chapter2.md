@@ -2,7 +2,7 @@
 title       : graphR 2 - Mapping et facettes
 description : Ces exercices visent a vous familiariser avec les principes du mapping et des facettes, en vous permettant de représenter davantage d'information sur vos graphiques
 
---- type:NormalExercise lang:r xp:100 skills:1 key:6910f622a9
+--- type:NormalExercise lang:r xp:75 skills:1 key:6910f622a9
 ## 1) Mapping
 
 `ggplot2` et `diamonds` ont déjà été chargés.
@@ -69,12 +69,15 @@ test_function("ggplot",c("data","mapping"),index=3)
 test_function("geom_point",c("mapping"),index=1)
 test_function("geom_point",c("mapping"),index=2)
 test_function("geom_point",c("mapping"),index=3)
+success_msg("Très bien! En faisant du **mapping** vous ajoutez des informations supplémentaires à votre graphique uni ou bivarié...")
 ```
 
 *** =hint
-Avez-vous bien fait appel à la fonction `aes()`? Cette fonction peut prendre plusieurs arguments, séparés par une virgule...
+Avez-vous bien fait appel à la fonction `aes()` dans vos appels à `geom_point()`? 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:979e26f73b
+Cette fonction `aes()` peut prendre plusieurs arguments, séparés par une virgule...
+
+--- type:NormalExercise lang:r xp:75 skills:1 key:979e26f73b
 ## 2) Parametres fixes vs parametres variables
 
 *** =pre_exercise_code
@@ -115,8 +118,8 @@ test_function("geom_point",c("shape","mapping"))
 success_msg("Oui! Vous pouvez soit définir les paramètres des geoms comme des constantes, ou bien les relier à des variables via le processus de mapping...")
 ```
 
-*** hint
-Si vous définissez le paramètre comme une constante, vous devez le spécifier à l'extérieur de la fonction `aes()`...
+*** =hint
+Si vous définissez le paramètre comme une **constante**, vous devez le spécifier à l'**extérieur** de la fonction `aes()`...
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c256ad22fc
 ## 3) Esthetique globale ou de geom
@@ -142,10 +145,10 @@ Quelle proposition est **vraie**?
 *** =sct
 ```{r}
 test_mc(correct = 4,
-        feedback_msgs = c("Non, c'est la couleur de bordure des boxplots qui dépend de `cut`",
+        feedback_msgs = c("Non, c'est la couleur de **bordure** des boxplots qui dépend de `cut`",
                           "Non, la couleur des rugs dépend de `cut`!",
                           "Non, la couleur de bordure des boxplots dépend de `cut`...",
-                          "Oui, bravo! Les paramètres renseignés dans l'appel à `ggplot()` valent pour l'ensemble des geoms..."))
+                          "Oui, bravo! Les paramètres renseignés **dans l'appel à `ggplot()`** valent pour l'**ensemble** des geoms..."))
 
 ```
 
