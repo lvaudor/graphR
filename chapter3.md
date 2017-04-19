@@ -136,8 +136,8 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_ggplot(exact_aes=TRUE, exact_geom=TRUE, exact_scale=TRUE, check_extra=TRUE, exact_extra=TRUE)
-
+test_ggplot(exact_aes=TRUE, exact_geom=TRUE, exact_scale=TRUE)
+test_function("theme_minimal")
 ```
 
 *** =hint 
