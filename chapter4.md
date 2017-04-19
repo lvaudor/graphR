@@ -124,7 +124,8 @@ plot(p)
 ```{r}
 test_error()
 
-test_ggplot(exact_aes=TRUE, exact_geom=TRUE, check_facet=TRUE, exact_facet=TRUE)
+test_ggplot(exact_aes=TRUE, exact_geom=TRUE, check_facet=TRUE)
+ex()  %>%  check_function("facet_wrap")  %>%  check_arg("scales")  %>% check_equal()
 success_msg("Oui, bravo! Avez-vous remarqué comme la création de facettes affecte l'ensemble du graphique (et notamment le `geom_smooth()`? Vous pouvez fermer cette fenêtre et double-cliquer sur le graphique si vous voulez l'examiner de plus près...")
 ```
 
