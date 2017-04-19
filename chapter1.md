@@ -289,7 +289,11 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-f1 <- ex() %>% check_operator("+") %>% check_function("ggplot", index=1)
+p <- ex() %>% check_operator("+") 
+p %>% check_function("ggplot")
+p %>% check_function("geom_histogram")  %>% check_arg("fill")
+p %>% check_function("geom_rug")
+
 success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment sympas!...")
 ```
 
