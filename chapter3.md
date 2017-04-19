@@ -47,7 +47,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_ggplot(index=1,exact_aes=TRUE, exact_geom=TRUE, exact_scale=TRUE)
+test_ggplot(index=1,exact_aes=TRUE, exact_geom=TRUE, check_scale=TRUE)
 success_msg("Oui! Vous savez maintenant customiser vos axes!!")
 ```
 
