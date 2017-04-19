@@ -41,11 +41,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-f1 <- ex() %>% check_function("ggplot")
-f1  %>% check_arg("data") %>% check_equal()
-f1  %>% check_arg("mapping") %>% check_equal()
-f2 <- ex() %>% check_function("geom_histogram")
-f2  %>% check_arg("fill") %>% check_equal()
+test_ggplot(exact_aes=TRUE, exact_geom=TRUE)
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
 ```
 
@@ -148,18 +144,9 @@ plot(p3)
 *** =sct
 ```{r}
 test_error()
-f1 <- ex() %>% check_function("ggplot", index=1)
-f1  %>% check_arg("data") %>% check_equal()
-f1  %>% check_arg("mapping") %>% check_equal()
-f2 <- ex() %>% check_function("ggplot", index=2)
-f2  %>% check_arg("data") %>% check_equal()
-f2  %>% check_arg("mapping") %>% check_equal()
-f3 <- ex() %>% check_function("ggplot", index=3)
-f3  %>% check_arg("data") %>% check_equal()
-f3  %>% check_arg("mapping") %>% check_equal()
-g1 <- ex() %>% check_function("geom_point")
-g2 <- ex() %>% check_function("geom_boxplot")
-g3 <- ex() %>% check_function("geom_bar")
+test_ggplot(index=1,exact_aes=TRUE, exact_geom=TRUE)
+test_ggplot(index=2,exact_aes=TRUE, exact_geom=TRUE)
+test_ggplot(index=3,exact_aes=TRUE, exact_geom=TRUE)
 success_msg("Bien! Il y a encore bien d'autres geoms disponibles, mais `point` et `boxplot` sont des incontournables...")
 ```
 
@@ -226,20 +213,10 @@ plot(p3)
 *** =sct
 ```{r}
 test_error()
-f1 <- ex() %>% check_function("ggplot", index=1)
-f1  %>% check_arg("data") %>% check_equal()
-f1  %>% check_arg("mapping") %>% check_equal()
-f2 <- ex() %>% check_function("ggplot", index=2)
-f2  %>% check_arg("data") %>% check_equal()
-f2  %>% check_arg("mapping") %>% check_equal()
-f3 <- ex() %>% check_function("ggplot", index=3)
-f3  %>% check_arg("data") %>% check_equal()
-f3  %>% check_arg("mapping") %>% check_equal()
 
-g1 <- ex() %>% check_function("geom_point", index=1) %>% check_arg("color") %>% check_equal()
-g2 <- ex() %>% check_function("geom_boxplot", index=1) %>% check_arg("fill") %>% check_equal()
-g3 <- ex() %>% check_function("geom_bar", index=1) %>% check_arg("alpha") %>% check_equal()
-
+test_ggplot(index=1,exact_aes=TRUE, exact_geom=TRUE)
+test_ggplot(index=2,exact_aes=TRUE, exact_geom=TRUE)
+test_ggplot(index=3,exact_aes=TRUE, exact_geom=TRUE)
 
 success_msg("Bien joué! Quelle joie, vous allez pouvoir customiser tous vos graphiques en rose!")
 ```
@@ -290,10 +267,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-p <- ex() %>% check_operator("+") 
-p %>% check_function("ggplot")
-p %>% check_function("geom_histogram")  %>% check_arg("fill") %>% check_equal()
-p %>% check_function("geom_rug")
+test_ggplot(index=1,exact_aes=TRUE, exact_geom=TRUE)
 
 success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment sympas!...")
 ```

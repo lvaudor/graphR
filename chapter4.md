@@ -38,9 +38,8 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"))
-test_function("geom_boxplot",c("fill"))
-test_function("stat_summary",c("fun.y","color"))
+
+test_ggplot(exact_aes=TRUE, exact_geom=TRUE, exact_stat=TRUE)
 success_msg("Oui! Visiblement, le prix d'un diamant est peu corrélé à la perfection de sa coupe!")
 ```
 
@@ -124,10 +123,8 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"))
-test_function("geom_line")
-test_function("geom_smooth")
-test_function("facet_wrap",c("facets","scales"))
+
+test_ggplot(exact_aes=TRUE, exact_geom=TRUE, check_facet=TRUE, exact_facet=TRUE)
 success_msg("Oui, bravo! Avez-vous remarqué comme la création de facettes affecte l'ensemble du graphique (et notamment le `geom_smooth()`? Vous pouvez fermer cette fenêtre et double-cliquer sur le graphique si vous voulez l'examiner de plus près...")
 ```
 

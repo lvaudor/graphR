@@ -47,11 +47,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"))
-test_function("geom_boxplot")
-test_function("labs", c("x","y"))
-test_function("scale_y_log10")
-test_function("scale_x_discrete",c("labels"))
+test_ggplot(index=1,exact_aes=TRUE, exact_geom=TRUE, exact_scale=TRUE)
 success_msg("Oui! Vous savez maintenant customiser vos axes!!")
 ```
 
@@ -140,9 +136,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"))
-test_function("theme_minimal")
-test_function("scale_color_gradient",c("low","high"))
+test_ggplot(exact_aes=TRUE, exact_geom=TRUE, exact_scale=TRUE)
 ```
 
 *** =hint 
