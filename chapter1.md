@@ -291,7 +291,7 @@ plot(p)
 test_error()
 p <- ex() %>% check_operator("+") 
 p %>% check_function("ggplot")
-p %>% check_function("geom_histogram")  %>% check_arg("fill")
+p %>% check_function("geom_histogram")  %>% check_arg("fill",eq_condition="equal")
 p %>% check_function("geom_rug")
 
 success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment sympas!...")
