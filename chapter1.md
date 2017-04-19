@@ -41,8 +41,11 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"))
-test_function("geom_histogram",c("fill"))
+f <- ex() %>% check_function("ggplot")
+f  %>% check_argument("data")
+f  %>% check_argument("mapping")
+f <- ex() %>% check_function("geom_histogram")
+f  %>% check_argument("fill")
 success_msg("Bien joué! vous avez fait votre premier graphique avec ggplot...")
 ```
 
