@@ -63,15 +63,14 @@ plot(p3)
 *** =sct
 ```{r}
 test_error()
-f1 <- ex() %>% check_function("ggplot",index=1)
-f1 %>% check_arg("data") %>% check_equal()
-g1 <- f1 %>% check_arg("mapping") %>% check_function("aes")
-g1 %>% check_arg("color") %>% check_equal()
+test_ggplot(index=1)
+test_ggplot(index=2)
 
-f2 <- ex() %>% check_function("ggplot",index=2)
-f2 %>% check_arg("data") %>% check_equal()
-g2 <- f2 %>% check_arg("mapping") %>% check_function("aes")
-g2 %>% check_arg("size")  %>% check_equal()
+test_ggplot(index=2)
+#f2 <- ex() %>% check_function("ggplot",index=2)
+#f2 %>% check_arg("data") %>% check_equal()
+#g2 <- f2 %>% check_arg("mapping") %>% check_function("aes")
+#g2 %>% check_arg("size")  %>% check_equal()
 
 #f3 <- ex() %>% check_function("ggplot",index=3)
 #f3 %>% check_arg("data") %>% check_equal()
