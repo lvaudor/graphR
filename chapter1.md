@@ -289,9 +289,7 @@ plot(p)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"))
-test_function("geom_histogram", c("fill"))
-test_function("geom_rug")
+f1 <- ex() %>% check_operator("+") %>% check_function("ggplot", index=1)
 success_msg("Bravo! Vous êtes en bonne voie pour faire des graphiques vraiment sympas!...")
 ```
 
