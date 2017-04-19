@@ -31,7 +31,7 @@ plot(p)
 ```{r}
 p <- ggplot(diamonds, aes(x=cut, y=price)) +
   geom_boxplot(fill="pink")+
-  stat_summary(fun.y="mean",color="blue")
+  stat_summary(fun.y="mean",color="blue", geom="point")
 plot(p)
 ```
 
