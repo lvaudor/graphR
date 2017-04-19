@@ -225,19 +225,28 @@ plot(p3)
 *** =sct
 ```{r}
 test_error()
-test_function("ggplot",c("data","mapping"),index=1)
-test_function("ggplot",c("data","mapping"),index=2)
-test_function("ggplot",c("data","mapping"),index=3)
-test_function("geom_point",c("color"))
-test_function("geom_boxplot",c("fill"))
-test_function("geom_bar",c("alpha"))
+f1 <- ex() %>% check_function("ggplot", index=1)
+f1  %>% check_arg("data")
+f1  %>% check_arg("mapping")
+f2 <- ex() %>% check_function("ggplot", index=2)
+f2  %>% check_arg("data")
+f2  %>% check_arg("mapping")
+f3 <- ex() %>% check_function("ggplot", index=3)
+f3  %>% check_arg("data")
+f3  %>% check_arg("mapping")
+
+g1 <- ex() %>% check_function("geom_point", index=1) %>% check_arg("color")
+g2 <- ex() %>% check_function("geom_boxplot", index=1) %>% check_arg("fill")
+g3 <- ex() %>% check_function("geom_bar", index=1) %>% check_arg("alpha")
+
+
 success_msg("Bien joué! Quelle joie, vous allez pouvoir customiser tous vos graphiques en rose!")
 ```
 
 *** =hint
 Avez-vous bien trouvé le nom des paramètres qui vous intéressent?
 
--`color` pour la couleur de bordure, 
+- `color` pour la couleur de bordure, 
 - `fill` pour la couleur de remplissage,
 - `alpha` (valeurs entre 0 et 1) pour la transparence...
 
