@@ -21,7 +21,7 @@ data(diamonds)
 
 - les **étiquettes d'axes** soient "coupe" (en x) et "prix" (en y)
 - l'**échelle des y** soient transformée par une **transformation log10**
-- les **valeurs de l'axe x** soient traduites (en "Correcte","Bonne","Très bonne","Premium","Idéale")
+- les **valeurs de l'axe x** soient traduites (en "Correcte","Bonne","Tres bonne","Premium","Ideale")
 
 *** =sample_code
 ```{r}
@@ -40,7 +40,7 @@ p <- ggplot(diamonds, aes(x=cut, y=price)) +
   geom_boxplot(fill="pink") +
   labs(x="coupe",y="prix") +
   scale_y_log10() +
-  scale_x_discrete(labels=c("Correcte","Bonne","Très bonne","Premium","Idéale"))
+  scale_x_discrete(labels=c("Correcte","Bonne","Tres bonne","Premium","Ideale"))
 plot(p)
 ```
 
