@@ -63,20 +63,9 @@ plot(p3)
 *** =sct
 ```{r}
 test_error()
-test_ggplot(index=1)
-test_ggplot(index=2)
-
-test_ggplot(index=2)
-#f2 <- ex() %>% check_function("ggplot",index=2)
-#f2 %>% check_arg("data") %>% check_equal()
-#g2 <- f2 %>% check_arg("mapping") %>% check_function("aes")
-#g2 %>% check_arg("size")  %>% check_equal()
-
-#f3 <- ex() %>% check_function("ggplot",index=3)
-#f3 %>% check_arg("data") %>% check_equal()
-#g3 <- f3 %>% check_arg("mapping") %>% check_function("aes")
-#g3 %>% check_arg("color") %>% check_equal()
-#g3 %>% check_arg("size") %>% check_equal()
+test_ggplot(index=1, exact_aes=TRUE, exact_geom=TRUE)
+test_ggplot(index=2, exact_aes=TRUE, exact_geom=TRUE)
+test_ggplot(index=3, exact_aes=TRUE, exact_geom=TRUE)
 
 success_msg("Très bien! En faisant du **mapping** vous ajoutez des informations supplémentaires à votre graphique uni ou bivarié...")
 ```
